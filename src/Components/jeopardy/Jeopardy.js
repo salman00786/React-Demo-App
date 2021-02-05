@@ -58,6 +58,7 @@ class Jeopardy extends Component {
     if (!this.state.data) {
       return <div>Loading!!!</div>;
     }
+    let category = this.state.data.category && this.state.data.category.title;
 
     return (
       <div>
@@ -66,11 +67,11 @@ class Jeopardy extends Component {
           <br />
           <p>{this.state.data.question}</p>
         </div>
-        {/* <div>
+        <div>
           <label>Category: </label>
           <br />
-          <p>{this.state.data.category.title}</p>
-        </div> */}
+          <p>{category}</p>
+        </div>
         <div>
           <label>Value: </label>
           <br />
